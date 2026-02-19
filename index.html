@@ -3,273 +3,134 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kradex Digital | Diseño Web & Hosting</title>
+<title>Kradex Digital | Diseño Web Premium</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
-
-body{
-    background:#0f0f0f;
-    color:white;
-}
-
-header{
-    background:#111;
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:fixed;
-    width:100%;
-    z-index:1000;
-    border-bottom:1px solid #1f1f1f;
-}
-
-.logo{
-    font-size:24px;
-    font-weight:800;
-    color:#e50914;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#e50914;
-}
-
-.hero{
-    height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),
-               url("https://cdn.discordapp.com/attachments/1340206943867895848/1472878186252730489/image.png?ex=69942c34&is=6992dab4&hm=f8c0a2c348f0b6ad2b7289945434c040a6b6de3afd027bd0a7d4b7fb7b9c7778&") center/cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:0 20px;
-}
-
-.hero h1{
-    font-size:48px;
-    font-weight:800;
-}
-
-.hero p{
-    margin-top:20px;
-    color:#ccc;
-    font-size:18px;
-}
-
-.btn{
-    margin-top:30px;
-    display:inline-block;
-    background:#e50914;
-    padding:14px 30px;
-    border-radius:6px;
-    text-decoration:none;
-    color:white;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:#b20710;
-}
-
-section{
-    padding:120px 8%;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-    font-size:32px;
-}
-
-.services{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:#1a1a1a;
-    padding:25px;
-    border-radius:10px;
-    transition:0.3s;
-    border:1px solid #222;
-}
-
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 15px 40px rgba(229,9,20,0.3);
-}
-
-.card h3{
-    margin-bottom:15px;
-    color:#e50914;
-}
-
-.about{
-    background:#141414;
-    padding:40px;
-    border-radius:12px;
-    text-align:center;
-}
-
-.whatsapp{
-    position:fixed;
-    bottom:20px;
-    left:20px;
-    background:#25D366;
-    color:white;
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:26px;
-    text-decoration:none;
-    box-shadow:0 5px 20px rgba(0,0,0,0.4);
-}
-
-footer{
-    background:#0a0a0a;
-    padding:40px;
-    text-align:center;
-    border-top:1px solid #1f1f1f;
-    color:#777;
-}
-
-@media(max-width:768px){
-    .hero h1{
-        font-size:32px;
-    }
-}
-</style>
+<!-- Iconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+
+<div class="animated-bg"></div>
 
 <header>
     <div class="logo">Kradex Digital</div>
     <nav>
         <a href="#servicios">Servicios</a>
-        <a href="#nosotros">Nosotros</a>
+        <a href="#productos">Productos</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#faq">FAQ</a>
         <a href="#contacto">Contacto</a>
     </nav>
 </header>
 
 <section class="hero">
-    <div>
-        <h1>Impulsá tu negocio con una web profesional</h1>
-        <p>Diseño moderno, dominio propio y hosting incluido para que tu empresa crezca online.</p>
-        <a href="#servicios" class="btn">Ver Servicios</a>
+    <div class="hero-content reveal">
+        <h1>Webs que venden. Diseño que impacta.</h1>
+        <p>Dominio, hosting y diseño premium incluido.</p>
+        <a href="#productos" class="btn glow">Ver Productos</a>
     </div>
 </section>
 
-<section id="servicios">
-<h2 class="section-title">¿Qué Incluye?</h2>
+<section id="productos">
+<h2 class="section-title reveal">Nuestros Productos</h2>
 
 <div class="services">
 
-<div class="card">
-<h3>✔ Página Profesional</h3>
-<p>Diseño personalizado adaptado a tu negocio.</p>
+<div class="card reveal">
+<img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d" alt="">
+<h3>Landing Básica</h3>
+<p>Ideal para emprendedores.</p>
+<p class="precio">$120 USD</p>
+<button class="btn glow" onclick="enviarWhatsApp('Landing Básica','$120 USD')">
+<i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+</button>
 </div>
 
-<div class="card">
-<h3>✔ Dominio Propio</h3>
-<p>Ej: suempresa.com registrado a tu nombre.</p>
+<div class="card reveal">
+<img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a" alt="">
+<h3>Web Profesional</h3>
+<p>Múltiples secciones y diseño premium.</p>
+<p class="precio">$250 USD</p>
+<button class="btn glow" onclick="enviarWhatsApp('Web Profesional','$250 USD')">
+<i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+</button>
 </div>
 
-<div class="card">
-<h3>✔ Hosting Incluido</h3>
-<p>Servidor rápido, seguro y con soporte técnico 24/7.</p>
-</div>
-
-<div class="card">
-<h3>✔ Diseño Moderno</h3>
-<p>Estética profesional y actualizada.</p>
-</div>
-
-<div class="card">
-<h3>✔ Botón WhatsApp</h3>
-<p>Contacto directo con tus clientes para mayores resultados.</p>
-</div>
-
-<div class="card">
-<h3>✔ Optimización</h3>
-<p>Compatible con Telefonos, tablets, computadoras, etc.</p>
+<div class="card reveal">
+<img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231" alt="">
+<h3>Tienda Online</h3>
+<p>E-commerce completo.</p>
+<p class="precio">$400 USD</p>
+<button class="btn glow" onclick="enviarWhatsApp('Tienda Online','$400 USD')">
+<i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+</button>
 </div>
 
 </div>
 </section>
 
-<section id="nosotros">
-<h2 class="section-title">Sobre Kradex Digital</h2>
-<div class="about">
-<p>
-Ayudamos a negocios a tener una presencia online profesional y confiable.
-Diseñamos páginas rápidas, modernas y pensadas para que tus clientes te encuentren fácil y te elijan.
-</p>
+<section id="testimonios">
+<h2 class="section-title reveal">Testimonios</h2>
 
-<br><br>
+<div class="services">
+<div class="card reveal">
+<p>"Duplicamos consultas en el primer mes."</p>
+<h4>- Cliente 1</h4>
+</div>
 
-<p>
-Sabemos que hoy en día no alcanza con solo tener redes sociales. Una página web bien hecha
-genera confianza, mejora tu imagen y te da un espacio propio donde mostrás tus servicios
-sin depender de algoritmos ni plataformas externas.
-</p>
+<div class="card reveal">
+<p>"Diseño profesional y rápido."</p>
+<h4>- Cliente 2</h4>
+</div>
 
-<br><br>
+<div class="card reveal">
+<p>"Superó nuestras expectativas."</p>
+<h4>- Cliente 3</h4>
+</div>
+</div>
+</section>
 
-<h3 style="color:#e50914;">¿Por qué elegirnos?</h3>
+<section id="faq">
+<h2 class="section-title reveal">Preguntas Frecuentes</h2>
 
-<p>
-Porque no vendemos “una página más”. Nos enfocamos en entender tu negocio,
-tus objetivos y el tipo de cliente que querés atraer. Cada proyecto lo trabajamos
-como si fuera propio: cuidando el diseño, la velocidad y la experiencia del usuario.
-</p>
+<div class="faq reveal">
+<div class="faq-item">
+<h3>¿Incluye dominio?</h3>
+<p>Sí, dominio registrado a tu nombre.</p>
+</div>
 
-<br>
+<div class="faq-item">
+<h3>¿Incluye hosting?</h3>
+<p>Hosting rápido y seguro incluido.</p>
+</div>
 
-<p>
-Si tu empresa quiere verse profesional, generar más consultas y destacarse frente
-a la competencia, tener una web bien desarrollada es el primer paso y nosotros te ayudamos con eso.
-</p>
-
+<div class="faq-item">
+<h3>¿Cuánto tarda?</h3>
+<p>Entre 3 y 7 días dependiendo el proyecto.</p>
+</div>
 </div>
 </section>
 
 <section id="contacto">
-<h2 class="section-title">Contacto</h2>
+<h2 class="section-title reveal">Contacto</h2>
 <p style="text-align:center;">
-WhatsApp: +54 9 2914718300<br><br>
-Instagram: @Kradex.Store <br><br>
-Email: -
-
+WhatsApp: +54 9 2914718300
 </p>
 </section>
 
-<a class="whatsapp" href="https://wa.me/56968510054" target="_blank">💬</a>
+<a class="whatsapp-float" href="https://wa.me/5492914718300" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
 
 <footer>
-© 2026 Kradex Digital - Todos los derechos reservados | Designed By <Kradex class="Store"></Kradex>
+© 2026 Kradex Digital - Todos los derechos reservados
 </footer>
 
+<script src="script.js"></script>
 </body>
 </html>
 
